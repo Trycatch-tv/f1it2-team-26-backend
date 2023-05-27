@@ -1,6 +1,8 @@
 package com.team26.team26.entity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "property")
 public class Property {
@@ -16,10 +18,8 @@ public class Property {
     private String state;
     @Column(name = "address", length = 50)
     private String address;
-
     @Column(name = "city", length = 50)
     private String city;
-
     @Column(name = "area_size")
     private Float area_size;
     @Column(name = "price")
@@ -28,8 +28,16 @@ public class Property {
     private String characteristics;
     @Column(name = "description", length = 50)
     private String description;
+    @Column(name = "image", length = 250)
+    private String image;
+    @Column(name = "date_created")
+    private LocalDateTime date_created;
+    @PrePersist //Hora de registro en la base de datos
+    public void prePersist() {
+        date_created = LocalDateTime.now();
+    }
 
-    public Property(String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description) {
+    public Property(String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image) {
         this.property_id = property_id;
         this.property_name = property_name;
         this.property_type = property_type;
@@ -40,18 +48,8 @@ public class Property {
         this.price = price;
         this.characteristics = characteristics;
         this.description = description;
-    }
-
-    public Property(String property_name) {
-        this.property_name = property_name;
-        this.property_type = property_type;
-        this.state = state;
-        this.address = address;
-        this.city = city;
-        this.area_size = area_size;
-        this.price = price;
-        this.characteristics = characteristics;
-        this.description = description;
+        this.image = image;
+        this.date_created = date_created;
     }
 
     public int getProperty_id() {
@@ -134,6 +132,22 @@ public class Property {
         this.description = description;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public LocalDateTime getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(LocalDateTime date_created) {
+        this.date_created = date_created;
+    }
+
     @Override
     public String toString() {
         return "Property{" +
@@ -147,6 +161,8 @@ public class Property {
                 ", price=" + price +
                 ", characteristics='" + characteristics + '\'' +
                 ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", date_created=" + date_created +
                 '}';
     }
 }

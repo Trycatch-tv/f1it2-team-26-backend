@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 public class PropertyDTO {
 
@@ -17,9 +18,11 @@ public class PropertyDTO {
     private Float price;
     private String characteristics;
     private String description;
+    private String image;
+    private LocalDateTime date_created;
 
 
-    public PropertyDTO(int property_id, String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description) {
+    public PropertyDTO(int property_id, String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image, LocalDateTime date_created) {
         this.property_id = property_id;
         this.property_name = property_name;
         this.property_type = property_type;
@@ -30,6 +33,8 @@ public class PropertyDTO {
         this.price = price;
         this.characteristics = characteristics;
         this.description = description;
+        this.image = image;
+        this.date_created = date_created;
     }
 
     public PropertyDTO() {
@@ -115,9 +120,25 @@ public class PropertyDTO {
         this.description = description;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public LocalDateTime getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(LocalDateTime date_created) {
+        this.date_created = date_created;
+    }
+
     @Override
     public String toString() {
-        return "PropertyDTO{" +
+        return "Property{" +
                 "property_id=" + property_id +
                 ", property_name='" + property_name + '\'' +
                 ", property_type='" + property_type + '\'' +
@@ -128,6 +149,8 @@ public class PropertyDTO {
                 ", price=" + price +
                 ", characteristics='" + characteristics + '\'' +
                 ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", date_created=" + date_created +
                 '}';
     }
 }

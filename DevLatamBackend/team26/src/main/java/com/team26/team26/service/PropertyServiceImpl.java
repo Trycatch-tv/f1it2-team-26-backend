@@ -23,7 +23,9 @@ public class PropertyServiceImpl implements PropertyService{
                 propertyCreateDTO.getArea_size(),
                 propertyCreateDTO.getPrice(),
                 propertyCreateDTO.getCharacteristics(),
-                propertyCreateDTO.getDescription()
+                propertyCreateDTO.getDescription(),
+                propertyCreateDTO.getImage()
+//                propertyCreateDTO.getDate_created()
         );
 
         propertyRepo.save(property);

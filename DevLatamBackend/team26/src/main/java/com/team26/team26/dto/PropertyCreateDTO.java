@@ -1,119 +1,142 @@
 package com.team26.team26.dto;
 
+import java.time.LocalDateTime;
+
 public class PropertyCreateDTO {
 
-    private String property_name;
-    private String property_type;
-    private String state;
-    private String address;
-    private String city;
-    private Float area_size;
-    private Float price;
-    private String characteristics;
-    private String description;
-
-    public PropertyCreateDTO() {
-    }
-
-    public PropertyCreateDTO(String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description) {
-        this.property_name = property_name;
-        this.property_type = property_type;
-        this.state = state;
-        this.address = address;
-        this.city = city;
-        this.area_size = area_size;
-        this.price = price;
-        this.characteristics = characteristics;
-        this.description = description;
-    }
+        private String property_name;
+        private String property_type;
+        private String state;
+        private String address;
+        private String city;
+        private Float area_size;
+        private Float price;
+        private String characteristics;
+        private String description;
+        private String image;
 
 
-    public String getProperty_name() {
-        return property_name;
-    }
 
-    public void setProperty_name(String property_name) {
-        this.property_name = property_name;
-    }
+        public PropertyCreateDTO(String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image ) {
+            this.property_name = property_name;
+            this.property_type = property_type;
+            this.state = state;
+            this.address = address;
+            this.city = city;
+            this.area_size = area_size;
+            this.price = price;
+            this.characteristics = characteristics;
+            this.description = description;
+            this.image = image;
+            //this.date_created = date_created;
+        }
 
-    public String getProperty_type() {
-        return property_type;
-    }
+        public PropertyCreateDTO() {
+        }
 
-    public void setProperty_type(String property_type) {
-        this.property_type = property_type;
-    }
+        public String getProperty_name() {
+            return property_name;
+        }
 
-    public String getState() {
-        return state;
-    }
+        public void setProperty_name(String property_name) {
+            this.property_name = property_name;
+        }
 
-    public void setState(String state) {
-        this.state = state;
-    }
+        public String getProperty_type() {
+            return property_type;
+        }
 
-    public String getAddress() {
-        return address;
-    }
+        public void setProperty_type(String property_type) {
+            this.property_type = property_type;
+        }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+        public String getState() {
+            return state;
+        }
 
-    public String getCity() {
-        return city;
-    }
+        public void setState(String state) {
+            this.state = state;
+        }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+        public String getAddress() {
+            return address;
+        }
 
-    public Float getArea_size() {
-        return area_size;
-    }
+        public void setAddress(String address) {
+            this.address = address;
+        }
 
-    public void setArea_size(Float area_size) {
-        this.area_size = area_size;
-    }
+        public String getCity() {
+            return city;
+        }
 
-    public Float getPrice() {
-        return price;
-    }
+        public void setCity(String city) {
+            this.city = city;
+        }
 
-    public void setPrice(Float price) {
-        this.price = price;
-    }
+        public Float getArea_size() {
+            return area_size;
+        }
 
-    public String getCharacteristics() {
-        return characteristics;
-    }
+        public void setArea_size(Float area_size) {
+            this.area_size = area_size;
+        }
 
-    public void setCharacteristics(String characteristics) {
-        this.characteristics = characteristics;
-    }
+        public Float getPrice() {
+            return price;
+        }
 
-    public String getDescription() {
-        return description;
-    }
+        public void setPrice(Float price) {
+            this.price = price;
+        }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+        public String getCharacteristics() {
+            return characteristics;
+        }
 
-    @Override
-    public String toString() {
-        return "PropertyDTO{" +
-                ", property_name='" + property_name + '\'' +
-                ", property_type='" + property_type + '\'' +
-                ", state='" + state + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", area_size=" + area_size +
-                ", price=" + price +
-                ", characteristics='" + characteristics + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+        public void setCharacteristics(String characteristics) {
+            this.characteristics = characteristics;
+        }
 
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
+
+//        public LocalDateTime getDate_created() {
+//            return date_created;
+//        }
+//
+//        public void setDate_created(LocalDateTime date_created) {
+//            this.date_created = date_created;
+//        }
+
+        @Override
+        public String toString() {
+            return "Property{" +
+                    ", property_name='" + property_name + '\'' +
+                    ", property_type='" + property_type + '\'' +
+                    ", state='" + state + '\'' +
+                    ", address='" + address + '\'' +
+                    ", city='" + city + '\'' +
+                    ", area_size=" + area_size +
+                    ", price=" + price +
+                    ", characteristics='" + characteristics + '\'' +
+                    ", description='" + description + '\'' +
+                    ", image='" + image + '\'' +
+//                    ", date_created=" + date_created +
+                    '}';
+        }
 
 }

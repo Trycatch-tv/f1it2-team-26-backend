@@ -13,14 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping(value = "api/v1/property")
 public class PropertyController {
-    // @Autowired
-    // TestService service;
-    //
-    //
-    // @GetMapping(path = "hola")
-    // public TestResponseDTO test(@RequestBody TestRequestDTO request){
-    //     return service.testHolaMundo(request);
-    // }
     @Autowired
     private PropertyService propertyService;
     @PostMapping(path = "/create")

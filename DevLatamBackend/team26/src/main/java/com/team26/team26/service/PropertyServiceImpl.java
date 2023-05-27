@@ -15,7 +15,15 @@ public class PropertyServiceImpl implements PropertyService{
     public String addProperty(PropertyCreateDTO propertyCreateDTO) {
 
         Property property = new Property(
-                propertyCreateDTO.getProperty_name()
+                propertyCreateDTO.getProperty_name(),
+                propertyCreateDTO.getProperty_type(),
+                propertyCreateDTO.getState(),
+                propertyCreateDTO.getAddress(),
+                propertyCreateDTO.getCity(),
+                propertyCreateDTO.getArea_size(),
+                propertyCreateDTO.getPrice(),
+                propertyCreateDTO.getCharacteristics(),
+                propertyCreateDTO.getDescription()
         );
 
         propertyRepo.save(property);

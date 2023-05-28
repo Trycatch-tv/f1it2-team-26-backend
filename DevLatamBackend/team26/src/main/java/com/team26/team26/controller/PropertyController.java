@@ -4,10 +4,7 @@ import com.team26.team26.dto.PropertyCreateDTO;
 import com.team26.team26.dto.PropertyDTO;
 import com.team26.team26.service.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 
@@ -21,5 +18,15 @@ public class PropertyController {
         String id = propertyService.addProperty(propertyCreateDTO);
         return id;
     }
+
+    @DeleteMapping(path = "/deleteproperty/{id}")
+    public String deleteProperty(@PathVariable(value = "id") int id)
+    {
+        boolean deleteproperty = propertyService.deleteProperty(id);
+        return "Property with id: " + id + " Deleted" ;
+    }
+
+
+
 
 }

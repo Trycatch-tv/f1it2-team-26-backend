@@ -52,6 +52,10 @@ public class Property {
         this.date_created = date_created;
     }
 
+    public Property() {
+        // Constructor por defecto sin argumentos
+    }
+
     public int getProperty_id() {
         return property_id;
     }

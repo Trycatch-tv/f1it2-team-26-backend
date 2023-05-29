@@ -11,6 +11,7 @@ public class PropertyDTO {
     private int property_id;
     private String property_name;
     private String property_type;
+    private String property_sale;
     private String state;
     private String address;
     private String city;
@@ -22,10 +23,11 @@ public class PropertyDTO {
     private LocalDateTime date_created;
 
 
-    public PropertyDTO(int property_id, String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image, LocalDateTime date_created) {
+    public PropertyDTO(int property_id, String property_name, String property_type, String property_sale ,String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image, LocalDateTime date_created) {
         this.property_id = property_id;
         this.property_name = property_name;
         this.property_type = property_type;
+        this.property_sale = property_sale;
         this.state = state;
         this.address = address;
         this.city = city;
@@ -62,6 +64,14 @@ public class PropertyDTO {
 
     public void setProperty_type(String property_type) {
         this.property_type = property_type;
+    }
+
+    public String getProperty_sale() {
+        return property_sale;
+    }
+
+    public void setProperty_sale(String property_sale) {
+        this.property_sale = property_sale;
     }
 
     public String getState() {
@@ -142,6 +152,7 @@ public class PropertyDTO {
                 "property_id=" + property_id +
                 ", property_name='" + property_name + '\'' +
                 ", property_type='" + property_type + '\'' +
+                ", property_sale='" + property_sale + '\'' +
                 ", state='" + state + '\'' +
                 ", address='" + address + '\'' +
                 ", city='" + city + '\'' +

@@ -14,6 +14,8 @@ public class Property {
     private String property_name;
     @Column(name = "property_type", length = 50)
     private String property_type;
+    @Column(name = "property_sale", length = 50)
+    private String property_sale;
     @Column(name = "state", length = 50)
     private String state;
     @Column(name = "address", length = 50)
@@ -37,10 +39,11 @@ public class Property {
         date_created = LocalDateTime.now();
     }
 
-    public Property(String property_name, String property_type, String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image) {
+    public Property(String property_name, String property_type, String property_sale , String state, String address, String city, Float area_size, Float price, String characteristics, String description, String image) {
         this.property_id = property_id;
         this.property_name = property_name;
         this.property_type = property_type;
+        this.property_sale = property_sale;
         this.state = state;
         this.address = address;
         this.city = city;
@@ -78,6 +81,14 @@ public class Property {
 
     public void setProperty_type(String property_type) {
         this.property_type = property_type;
+    }
+
+    public String getProperty_sale() {
+        return property_sale;
+    }
+
+    public void setProperty_sale(String property_sale) {
+        this.property_sale = property_sale;
     }
 
     public String getState() {
@@ -158,6 +169,7 @@ public class Property {
                 "property_id=" + property_id +
                 ", property_name='" + property_name + '\'' +
                 ", property_type='" + property_type + '\'' +
+                ", property_sale='" + property_sale + '\'' +
                 ", state='" + state + '\'' +
                 ", address='" + address + '\'' +
                 ", city='" + city + '\'' +

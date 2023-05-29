@@ -26,7 +26,4 @@ public class PropertyController {
         return "Property with id: " + id + " Deleted" ;
     }
 
-
-
-
 }

@@ -18,6 +18,7 @@ public class PropertyServiceImpl implements PropertyService{
         Property property = new Property(
                 propertyCreateDTO.getProperty_name(),
                 propertyCreateDTO.getProperty_type(),
+                propertyCreateDTO.getProperty_sale(),
                 propertyCreateDTO.getState(),
                 propertyCreateDTO.getAddress(),
                 propertyCreateDTO.getCity(),
@@ -26,7 +27,7 @@ public class PropertyServiceImpl implements PropertyService{
                 propertyCreateDTO.getCharacteristics(),
                 propertyCreateDTO.getDescription(),
                 propertyCreateDTO.getImage()
-//                propertyCreateDTO.getDate_created()
+//              propertyCreateDTO.getDate_created()
         );
 
         propertyRepo.save(property);

@@ -1,4 +1,4 @@
-package com.team26.team26.controller.PropertyRepo;
+package com.team26.team26.Repository;
 
 import com.team26.team26.entity.Property;
 import org.springframework.data.jpa.repository.JpaRepository;

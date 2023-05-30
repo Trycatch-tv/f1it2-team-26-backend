@@ -1,12 +1,13 @@
 package com.team26.team26.service;
 
-import com.team26.team26.controller.PropertyRepo.PropertyRepo;
+import com.team26.team26.Repository.PropertyRepo;
 import com.team26.team26.dto.PropertyCreateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.team26.team26.entity.Property;
 
-import java.util.UUID;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PropertyServiceImpl implements PropertyService{
@@ -36,6 +37,14 @@ public class PropertyServiceImpl implements PropertyService{
     }
 
     @Override
+    public List<Property> getAllProperties() {
+
+        List<Property> properties=propertyRepo.findAll();
+
+        return properties;
+    }
+
+    @Override
     public boolean deleteProperty(int id) {
         if(propertyRepo.existsById(id)){
             propertyRepo.deleteById(id);
@@ -44,5 +53,12 @@ public class PropertyServiceImpl implements PropertyService{
             System.out.println("Property not found");
         }
         return true;
+    }
+
+    @Override
+    public Property getPropertyByID(int id) {
+
+        Optional<Property> property= propertyRepo.findById(id);
+        return property.get();
     }
 }

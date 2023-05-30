@@ -1,0 +1,7 @@
+com\team26\team26\service\PropertyService.class
+com\team26\team26\controller\PropertyController.class
+com\team26\team26\dto\PropertyCreateDTO.class
+com\team26\team26\entity\Property.class
+com\team26\team26\dto\PropertyDTO.class
+com\team26\team26\controller\PropertyRepo\PropertyRepo.class
+com\team26\team26\service\PropertyServiceImpl.class

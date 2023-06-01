@@ -13,4 +13,6 @@ public interface PropertyService {
 
     ResponseDTO deleteProperty(int id);
     Property getPropertyByID(int id);
+
+    ResponseDTO updatePropertyById(Property property, int id);
 }

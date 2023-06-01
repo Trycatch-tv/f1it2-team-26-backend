@@ -47,4 +47,11 @@ public class PropertyController {
         return response;
     }
 
+    @PutMapping(path = "/update/{id}")
+    public ResponseDTO updateProperty(@RequestBody Property property, @PathVariable(value = "id") int id)
+    {
+        ResponseDTO response = propertyService.updatePropertyById(property,id);
+        return response;
+    }
+
 }

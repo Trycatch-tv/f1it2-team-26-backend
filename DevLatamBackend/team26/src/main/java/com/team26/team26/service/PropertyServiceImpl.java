@@ -65,4 +65,43 @@ public class PropertyServiceImpl implements PropertyService{
         Optional<Property> property= propertyRepo.findById(id);
         return property.get();
     }
+
+    public ResponseDTO updatePropertyById(Property property, int id){
+        ResponseDTO response = new ResponseDTO();
+        Optional<Property> propertySearch = propertyRepo.findById(id);
+
+        if(propertySearch.existsById(id)){
+            propertySearch.
+        }
+    }
+
+
+    @Override
+    @Transactional
+    public ResponseDTO updatePropertyById(Property property, int id){
+        ResponseDTO response = new ResponseDTO();
+        Optional<Property> propertyToUpdate = propertyRepo.findById(id);
+
+        if(propertyToUpdate.isEmpty()){
+            response.setMessage("Property no Found");
+        } else{
+            propertyToUpdate.get().setProperty_name(property.getProperty_name());
+            propertyToUpdate.get().setProperty_type(property.getProperty_type());
+            propertyToUpdate.get().setProperty_sale(property.getProperty_sale());
+            propertyToUpdate.get().setState(property.getState());
+            propertyToUpdate.get().setAddress(property.getAddress());
+            propertyToUpdate.get().setCity(property.getCity());
+            propertyToUpdate.get().setArea_size(property.getArea_size());
+            propertyToUpdate.get().setPrice(property.getPrice());
+            propertyToUpdate.get().setCharacteristics(property.getCharacteristics());
+            propertyToUpdate.get().setDescription(property.getDescription());
+            propertyToUpdate.get().setImage(property.getImage());
+
+            propertyRepo.save(propertyToUpdate.get());
+            response.setMessage("Successful update");
+        }
+
+        return response;
+
+    }
 }

@@ -1,8 +1,9 @@
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\controller\PropertyController.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\dto\PropertyDTO.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\Repository\PropertyRepo.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\service\PropertyService.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\dto\PropertyCreateDTO.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\entity\Property.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\SistemaInmobiliarioApplication.java
-C:\Users\dan5-\Downloads\Team26\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\service\PropertyServiceImpl.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\dto\ResponseDTO.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\Repository\PropertyRepo.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\service\PropertyService.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\entity\Property.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\dto\PropertyCreateDTO.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\SistemaInmobiliarioApplication.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\dto\PropertyDTO.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\service\PropertyServiceImpl.java
+D:\Documentos\Aprendizaje\Dev-latam-1\f1it2-team-26-backend\DevLatamBackend\team26\src\main\java\com\team26\team26\controller\PropertyController.java

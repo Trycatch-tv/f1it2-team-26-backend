@@ -4,5 +4,6 @@ com\team26\team26\Repository\PropertyRepo.class
 com\team26\team26\controller\PropertyController.class
 com\team26\team26\dto\PropertyCreateDTO.class
 com\team26\team26\SistemaInmobiliarioApplication.class
+com\team26\team26\dto\ResponseDTO.class
 com\team26\team26\entity\Property.class
 com\team26\team26\service\PropertyServiceImpl.class

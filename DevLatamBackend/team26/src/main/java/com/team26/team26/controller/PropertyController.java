@@ -2,8 +2,10 @@ package com.team26.team26.controller;
 
 import com.team26.team26.dto.PropertyCreateDTO;
 import com.team26.team26.dto.PropertyDTO;
+import com.team26.team26.dto.ResponseDTO;
 import com.team26.team26.entity.Property;
 import com.team26.team26.service.PropertyService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,10 +18,10 @@ public class PropertyController {
     @Autowired
     private PropertyService propertyService;
     @PostMapping(path = "/create")
-    public String createProperty(@RequestBody PropertyCreateDTO propertyCreateDTO)
+    public ResponseDTO createProperty(@RequestBody PropertyCreateDTO propertyCreateDTO)
     {
-        String id = propertyService.addProperty(propertyCreateDTO);
-        return id;
+        ResponseDTO response = propertyService.addProperty(propertyCreateDTO);
+        return response;
     }
 
     @GetMapping(path = "/getall")
@@ -39,10 +41,10 @@ public class PropertyController {
     }
 
     @DeleteMapping(path = "/deleteproperty/{id}")
-    public String deleteProperty(@PathVariable(value = "id") int id)
+    public ResponseDTO deleteProperty(@PathVariable(value = "id") int id)
     {
-        boolean deleteproperty = propertyService.deleteProperty(id);
-        return "Property with id: " + id + " Deleted" ;
+        ResponseDTO response = propertyService.deleteProperty(id);
+        return response;
     }
 
 }

@@ -2,6 +2,7 @@ package com.team26.team26.service;
 
 import com.team26.team26.Repository.PropertyRepo;
 import com.team26.team26.dto.PropertyCreateDTO;
+import com.team26.team26.dto.ResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.team26.team26.entity.Property;
@@ -14,8 +15,8 @@ public class PropertyServiceImpl implements PropertyService{
     @Autowired
     private PropertyRepo propertyRepo;
     @Override
-    public String addProperty(PropertyCreateDTO propertyCreateDTO) {
-
+    public ResponseDTO addProperty(PropertyCreateDTO propertyCreateDTO) {
+        ResponseDTO response = new ResponseDTO();
         Property property = new Property(
                 propertyCreateDTO.getProperty_name(),
                 propertyCreateDTO.getProperty_type(),
@@ -32,8 +33,8 @@ public class PropertyServiceImpl implements PropertyService{
         );
 
         propertyRepo.save(property);
-        return property.getProperty_name();
-
+        response.setMessage("Successful Creation");
+        return response;
     }
 
     @Override
@@ -45,14 +46,17 @@ public class PropertyServiceImpl implements PropertyService{
     }
 
     @Override
-    public boolean deleteProperty(int id) {
+    public ResponseDTO deleteProperty(int id) {
+        ResponseDTO response = new ResponseDTO();
+
         if(propertyRepo.existsById(id)){
             propertyRepo.deleteById(id);
+            response.setMessage("Successful Removal");
         }
         else {
-            System.out.println("Property not found");
+            response.setMessage("Property not Found");
         }
-        return true;
+        return response;
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.team26.team26.dto.ResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.team26.team26.entity.Property;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -64,15 +65,6 @@ public class PropertyServiceImpl implements PropertyService{
 
         Optional<Property> property= propertyRepo.findById(id);
         return property.get();
-    }
-
-    public ResponseDTO updatePropertyById(Property property, int id){
-        ResponseDTO response = new ResponseDTO();
-        Optional<Property> propertySearch = propertyRepo.findById(id);
-
-        if(propertySearch.existsById(id)){
-            propertySearch.
-        }
     }
 
 

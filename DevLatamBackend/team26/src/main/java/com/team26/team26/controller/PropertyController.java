@@ -54,12 +54,5 @@ public class PropertyController {
         ResponseDTO response = propertyService.updatePropertyById(property,id);
         return response;
     }
-
-    @GetMapping(path = "/test")
-    public ResponseDTO test2(){
-        ResponseDTO respose=new ResponseDTO();
-        respose.setMessage("ESTO ES UNA PRUEBA");
-        return respose;
-    }
-
+    
 }

@@ -55,7 +55,7 @@ public class PropertyController {
         return response;
     }
 
-    @GetMapping(path = "/test2")
+    @GetMapping(path = "/test")
     public ResponseDTO test2(){
         ResponseDTO respose=new ResponseDTO();
         respose.setMessage("ESTO ES UNA PRUEBA");
